@@ -1,15 +1,24 @@
 NAME                 READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/p4   1/1     1            1           94s
+deployment.apps/p4   1/1     1            1           4h17m
 
 NAME                            DESIRED   CURRENT   READY   AGE
-replicaset.apps/p4-7cbcc69dc8   1         1         1       94s
+replicaset.apps/p4-7cbcc69dc8   1         1         1       4h17m
 
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   6d19h
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   6d23h
 
 NAME                      READY   STATUS    RESTARTS   AGE
-pod/p4-7cbcc69dc8-fr289   1/1     Running   0          94s
+pod/p4-7cbcc69dc8-fr289   1/1     Running   0          4h17m
 Forwarding from 0.0.0.0:8000 -> 8080
+Handling connection for 8000
+Handling connection for 8000
 Handling connection for 8000
 
 
+./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
