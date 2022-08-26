@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://circleci.com/gh/Fnim987/UdacityP4.svg?style=svg)](https://circleci.com/gh/Fnim987/UdacityP4)
 
 ## Project Overview
 
@@ -17,30 +17,35 @@ Your project goal is to operationalize this working, machine learning microservi
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
 ---
+
+## Overview
+
+### Explaination of the files
+
+* app.py: code for the app
+* Dockerfile: instructions how to build the Docker container
+* make_predictions.sh: script to call the prediction function of the app
+* requirements.txt: list of dependecies that needs to be installed
+* run_docker.sh: script for building and running the Docker-container locally
+* run_kubernetes.sh: script for deploying the Docker-container to kubernetes
+* upload_docker.sh: script for uploading the Docker to Dockerhub
+* Folder: output_txt_files: logging-files
 
 ## Setup the Environment
 
-* Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
-```bash
-python3 -m pip install --user virtualenv
-# You should have Python 3.7 available in your host. 
-# Check the Python path using `which python3`
-# Use a command similar to this one:
-python3 -m virtualenv --python=<path-to-Python3.7> .devops
-source .devops/bin/activate
-```
+* Create a virtualenvironment with Python 
+  - run `make setup` to setup the environment
+  - run `make activate` to activate the environment
+
 * Run `make install` to install the necessary dependencies
 
 ### Running `app.py`
 
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+1. Standalone:  in the venv run `python3 app.py`
+2. Run in Docker:   run the script `./run_docker.sh`
+3. Run in Kubernetes:  run the script `./run_kubernetes.sh`
+4. to check functionality run `./make_predictions.sh` after 1., 2., 3.
 
 ### Kubernetes Steps
 
